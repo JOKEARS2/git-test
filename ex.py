@@ -84,3 +84,22 @@
 #-----------------------------------
 
 
+#ouvrir base_eleve, result.txt
+
+import os
+import sys
+
+directory_input1, directory_input2 = sys.argv[1], sys.argv[2]
+print(f"path : {directory_input1}")
+print(f"path : {directory_input2}")
+
+ 
+
+with open(directory_input1, "r") as firstfile, open(directory_input2, "w") as secondfile:
+   
+   for line in firstfile :  
+        donnee = firstfile.readline(30)
+        secondfile.writelines(donnee)
+    
+#recopie ligne par ligne en donnant un identifiant et un mot  depasse aléatoire a chaque personne dans le fichier text.txt
+

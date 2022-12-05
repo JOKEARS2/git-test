@@ -68,5 +68,19 @@
 
 
 #-----------------------------------
-with open("text.txt", "a") as f:
-    f.write ("Hello World\n")
+# import os
+# import sys
+
+# directory_input = sys.argv[1]
+
+# print(f"path : {directory_input}")
+
+
+# with open(directory_input, "a") as f:
+#     f.write ("Hello World\n")
+#     f.write ("Hello World\n")
+#     f.write ("Hello World\n")
+
+#-----------------------------------
+
+

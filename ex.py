@@ -112,15 +112,5 @@
 import os
 import sys
 
-def count_letters(string):
-  upper_count = 0
-  lower_count = 0
-  string = sys.argv[1]
-  for char in string:
-    if char.isupper():
-      upper_count += 1
-    elif char.islower():
-      lower_count += 1
-  return print(f"Nombre de Majuscule : {upper_count}     Nombre de Minuscule : {lower_count}")
 
 count_letters("string")

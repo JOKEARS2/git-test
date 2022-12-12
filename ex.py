@@ -84,22 +84,43 @@
 #-----------------------------------
 
 
-#ouvrir base_eleve, result.txt
+# #ouvrir base_eleve, result.txt
 
-import os
-import sys
+# import os
+# import sys
 
-directory_input1, directory_input2 = sys.argv[1], sys.argv[2]
-print(f"path : {directory_input1}")
-print(f"path : {directory_input2}")
+# directory_input1, directory_input2 = sys.argv[1], sys.argv[2]
+# print(f"path : {directory_input1}")
+# print(f"path : {directory_input2}")
 
  
 
-with open(directory_input1, "r") as firstfile, open(directory_input2, "w") as secondfile:
+# with open(directory_input1, "r") as firstfile, open(directory_input2, "w") as secondfile:
    
-   for line in firstfile :  
-        donnee = firstfile.readline(30)
-        secondfile.writelines(donnee)
+#    for line in firstfile :  
+#         donnee = firstfile.readline(30)
+#         secondfile.writelines(donnee)
     
-#recopie ligne par ligne en donnant un identifiant et un mot  depasse aléatoire a chaque personne dans le fichier text.txt
+# #recopie ligne par ligne en donnant un identifiant et un mot  depasse aléatoire a chaque personne dans le fichier text.txt
 
+# #-----------------------------------
+
+#print ("Twinkle, twinkle, little star,\n\tHow I wonder what you are!\n\t\tUp above the world so high,Like a diamond in the sky.\nTwinkle, twinkle, little star,\n\tHow I wonder what you are")
+
+
+# -----------------------------------
+import os
+import sys
+
+def count_letters(string):
+  upper_count = 0
+  lower_count = 0
+  string = sys.argv[1]
+  for char in string:
+    if char.isupper():
+      upper_count += 1
+    elif char.islower():
+      lower_count += 1
+  return print(f"Nombre de Majuscule : {upper_count}     Nombre de Minuscule : {lower_count}")
+
+count_letters("string")

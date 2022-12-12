@@ -109,8 +109,132 @@
 
 
 # -----------------------------------
-import os
-import sys
+
+# import os
+# import sys
+
+# def count_letters(string):
+#   upper_count = 0
+#   lower_count = 0
+#   string = sys.argv[1]
+#   for char in string:
+#     if char.isupper():
+#       upper_count += 1
+#     elif char.islower():
+#       lower_count += 1
+#   return print(f"Nombre de Majuscule : {upper_count}     Nombre de Minuscule : {lower_count}")
+
+# count_letters("string")
 
 
-count_letters("string")
+# -----------------------------------
+
+# nombre = float(input("Saisir un nombre"))
+
+# if nombre > 0 :
+#         print ("Positif")
+# elif nombre < 0 :
+#         print ("Negatif")
+# elif nombre == 0 :
+#         print ("Neutre")
+
+
+# -----------------------------------
+# phrase = input('Ta phrase :')
+
+# a = []
+
+# a.extend(phrase.split())
+
+# print(a)
+
+
+# -----------------------------------
+# lettre = input ("Entrez une lettre")
+
+# voyelles = ["a","e","i","o","u","y"]
+
+# consonnes = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"]
+
+
+
+# if lettre in consonnes:
+
+#    print("C'est une consonne")
+
+# else:
+
+#    print("C'est une voyelle")
+
+# -----------------------------------
+
+# liste_nbr = [1,2,10,100]
+# print (max(liste_nbr))
+
+# -----------------------------------
+
+# import argparse
+
+# parser = argparse.ArgumentParser(
+#                     prog = 'Mon programme qui écrit un emoji',
+#                     description = 'Ecrit des emojis',
+#                     )
+
+# parser.add_argument('emoji')           # positional argument
+# parser.add_argument('-n', '--number',type=int, choices=range(3, 16), default=5)      # option that takes a value
+
+# args = parser.parse_args()
+# # print(args.emoji, args.number)
+
+# for i in range(args.number):
+#     print(args.emoji, end="")
+
+# -----------------------------------
+# import sys
+# import os
+
+
+# if len(sys.argv) < 4:
+#     print("Merci d'indiquer le nom du fichier, la chaine de caractere a remplacer et la chaine de caractere de remplacement.")
+#     sys.exit()
+    
+# filename = sys.argv[1]
+# string = sys.argv[2]
+# replace_string = sys.argv[3]
+
+# if not os.path.exists(filename):
+#     print("Le fichier n'existe pas.")
+#     sys.exit()
+
+# with open(filename, "r") as file:
+#     content = file.read()
+
+# new_content = content.replace(string, replace_string)
+
+# with open(filename, "w") as file:
+#     file.write(new_content)
+# -----------------------------------
+
+# import paramiko 
+
+# ssh = paramiko.SSHClient()
+
+# ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+# ssh.connect('192.168.1.30', username ='francois' , key_filename="C:\\Users\\ROCHE François\\.ssh\\id_rsa")
+
+# stdin, stdout, stderr = ssh.exec_command('timedatectl')
+
+# print(stdout.readlines())
+
+# ssh.close()
+# -----------------------------------
+import paramiko
+
+srv = pysftp.Connection(host="192.168.1.30", username="francois",
+password="password")
+
+with srv.cd("/home/francois/Documents"):
+        srv.put("C:\Users\ROCHE François\Desktop\testsftp.txt")
+
+srv.close()
